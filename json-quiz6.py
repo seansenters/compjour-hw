@@ -36,7 +36,13 @@ for a in accounts:
 print ("B.", x)
 ('B.', 231)
 
-COME BACK TO E
+for a in accounts:
+    if a['verified']:
+        x += 1
+        
+
+print("C.", x)
+('C.', 543)
 
 counts = []
 
@@ -49,7 +55,16 @@ maxval = sorted(counts, reverse = True)[0]
 print ("D.", maxval)
 ('D.', 1955200)
 
-COME BACK TO E
+counts = []
+
+for a in accounts:
+    counts.append(a['statuses_count'])
+    
+
+maxval = sorted(counts, reverse = True)[0]
+
+print("E.", maxval)
+('E.', 47169)
 
 rom operator import itemgetter
 
