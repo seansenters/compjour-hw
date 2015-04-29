@@ -96,13 +96,6 @@ print('H.', s)
 
 changes = [calc_rank_change(b) for b in books_ranked_last_week]
 
-x [v for v in changes if v > 0]
-  File "<ipython-input-304-08e1eb76747b>", line 1
-    x [v for v in changes if v > 0]
-           ^
-SyntaxError: invalid syntax
-
-
 x = [v for v in changes if v > 0]
 
 s = sum(x)
@@ -128,44 +121,11 @@ print('J.', len(x), "|", s)
  print('K.', max([len(b['title']) for b in books]))
 ('K.', 33)
 
-print('L.', ([len(b['title']) for b in books] / (len['title'])))
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-320-ae5bc16c4fc1> in <module>()
-----> 1 print('L.', ([len(b['title']) for b in books] / (len['title'])))
-
-TypeError: 'builtin_function_or_method' object has no attribute '__getitem__'
-
-print('L.', round([len(b['title']) for b in books] / len(books)))
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-321-e68d0170d93f> in <module>()
-----> 1 print('L.', round([len(b['title']) for b in books] / len(books)))
-
-TypeError: unsupported operand type(s) for /: 'list' and 'int'
-
-print('L.', round([len(b['title']) for b in books] / len('title')))
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-322-2357295aece9> in <module>()
-----> 1 print('L.', round([len(b['title']) for b in books] / len('title')))
-
-TypeError: unsupported operand type(s) for /: 'list' and 'int'
-
 x = 0
 
 for b in books:
     x += b['title']
     
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-324-de552a2c67e6> in <module>()
-      1 for b in books:
-----> 2     x += b['title']
-      3 
-
-TypeError: unsupported operand type(s) for +=: 'int' and 'unicode'
-
 x = 0
 
 for b in books:
