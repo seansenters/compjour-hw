@@ -30,5 +30,7 @@ print("%s has %s job listings." % (state_name, data['TotalJobs']))
 
 Hawaii has 181 job listings.
 
-print("Together, they have 411 job listings.")
+sum_states = 230+181
+
+print("Together, they have %s job listings." %(sum_states))
 Together, they have 411 job listings.
