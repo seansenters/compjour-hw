@@ -8,7 +8,26 @@ for n in names:
     resp = requests.get(BASE_USAJOBS_URL, params = atts)
     jobcount = int(resp.json()['TotalJobs'])
     thelist.append([n, jobcount])
-    
+
+
+print(thelist)
+
+thelist[0]
+
+thelist[1]
+
+thelist[1] = ['US-CA', 662]
+
+thelist[2] = ['US-FL', 342]
+
+thelist[3] = ['US-MD', 374]
+
+thelist[4] = ['US-NY', 363]
+
+print(thelist)
+
+[['State', 'Job Count'], ['California', 662], ['Florida', 342], ['Maryland', 374], ['New York', 363]]
+[['State', 'Job Count'], ['US-CA', 662], ['US-FL', 342], ['US-MD', 374], ['US-NY', 363]]
 
 chartcode = """
 <!DOCTYPE html>
@@ -41,4 +60,19 @@ chartcode = """
 
 
 </body></html>
+"""
+
+
+del(thelist[0])
+
+print(thelist)
+[['US-CA', 662], ['US-FL', 342], ['US-MD', 374], ['US-NY', 363]]
+
+htmlfile = open("1-8.html", "w")
+
+htmlfile.write(chartcode % thelist)
+
+htmlfile.close()
+
+
 """
