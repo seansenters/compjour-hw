@@ -26,8 +26,6 @@ In [80]: for c in statelist:
     ...:     mylist.append([c, jobcount])
     ...:     
 
-In [84]: os.makedirs("data-hold")
-
 In [85]: f = open("data-hold/domestic-jobcount", "w")
 
 In [86]: f.write(json.dumps(mylist, indent = 2))
