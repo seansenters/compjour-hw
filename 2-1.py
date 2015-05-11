@@ -21,7 +21,7 @@ In [57]: for d in cdata['CountryCodes']:
     ...:         data = resp.json()
     ...:         jobcount = int(data['TotalJobs'])
     ...:         mylist.append([cname, jobcount])
-    ...: os.makedirs("data-hold", exist_ok = True)
+    ...: os.makedirs("data-hold")
     ...: f = open("data-hold/intl-jobcount.json", 'w')
     ...: f.write(json.dumps(mylist, indent = 2))
     ...: f.close()
