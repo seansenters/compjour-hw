@@ -8,16 +8,6 @@ response = requests.get(data_url)
 
 soup = bs4.BeautifulSoup(response.text)
 
-link = soup.select("span")[5]
-
-print(link.text)
-16,888
-
-link = soup.select("span")[7]
-
-print(link.text)
-114
-
 link = soup.select("span")[6]
 
 print(link.text)
