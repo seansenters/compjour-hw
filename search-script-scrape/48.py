@@ -37,3 +37,5 @@ for r in rows:
 print(totess)
 
 diff = totess - totes
+
+print(diff)
